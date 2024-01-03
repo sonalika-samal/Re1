@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .btn {
+        background-color: #343a40;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Dropdown button on hover & focus */
+      .btn:hover,
+      .btn:focus {
+        background-color: #45b3fc;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown a:hover {
+        background-color: grey;
+      }
+
+      /* Show the dropdown menu */
+      .show {
+        display: block;
+      }
+
+      body {
+        font-size: smaller;
+        background-color: white;
+      }
+
+      .home-section {
+        padding: 60px 0px;
+      }
+
+      .about-section {
+        padding: 60px 0px 60px;
+      }
+
+      .skills-section {
+        padding: 0px 0px 60px;
+      }
+
+      .bucket {
+        background-color: gainsboro;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        column-gap: 12px;
+      }
+
+      .container3 {
+        background-color: white;
+        column-gap: 30px;
+        height: auto;
+        width: 391px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid gainsboro;
+      }
+
+      .container3 h1 {
+        width: 100%;
+        padding: 0px 0px 12px 12px;
+        margin: 4px;
+      }
+
+      .item img {
+        background-color: white;
+        border-radius: 4px;
+        height: 200px;
+        width: 150px;
+        margin: 0px 0px 20px;
+      }
+
+      .bucket2 {
+        background-color: gainsboro;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .image-slider1 {
+        background-color: white;
+        position: relative;
+        width: 98%;
+        overflow: hidden;
+      }
+
+      .images-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .images-container div {
+        /* width: 100%; */
+        padding: 30px 0px 30px 30px;
+      }
+
+      .images-container img {
+        width: 150px;
+        height: 200px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        font-size: 24px;
+        cursor: pointer;
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        z-index: 1;
+      }
+
+      .left-arrow {
+        left: 10px;
+      }
+
+      .right-arrow {
+        right: 10px;
+      }
+
+      .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer a {
+        color: white;
+      }
+
+      .footer a:hover {
+        color: #f5af19;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <div class="container" style="padding-top: 0px">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="
+            color: white;
+            background: linear-gradient(
+              to right,
+              rgb(145, 4, 145),
+              rgb(56, 253, 56)
+            );
+            font-size: large;
+            padding: 10px;
+          "
+          >My Portfolio</a
+        >
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a
+                class="nav-link"
+                href="#home"
+                style="color: white; font-size: medium"
+                >Home <span class="sr-only"></span
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#skills"
+                style="color: white; font-size: medium"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#projects"
+                style="color: white; font-size: medium; padding-right: 16px"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn"
+                id="btn"
+                style="
+                  color: white;
+                  font-size: medium;
+                  background-color: #343a40;
+                  padding: 8px 8px 8px 0px;
+                "
+              >
+                My Notes>
+              </button>
+              <div class="dropdown" id="dropdown">
+                <a href="HTML.html"> HTML </a>
+                <a href="#jn"> CSS </a>
+                <a href="#gv"> JavaScript </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#gallery"
+                style="color: white; font-size: medium"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="co3.html"
+                style="color: white; font-size: medium"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="home-section" style="padding-top: 70px">
+      <div class="container" style="display: flex; flex-wrap: wrap">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="img.jpg"
+              alt="profile"
+              class="img-fluid rounded-circle"
+              style="height: 220px; width: 220px"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="home-title">
+              Hello, I'm <span class="home-name">Sonalika Samal</span>
+            </h1>
+            <p class="home-subtitle">
+              I'm a final year BCA student based in Cuttack, Odisha, India.
+            </p>
+            <p class="home-description">
+              This is my personal portfolio website in which I tried to explain
+              everything regarding my career and preferences.
+            </p>
+            <a href="#about" class="btn btn-primary home-button"
+              >More About Me</a
+            >
+            <a
+              href="SonalikaSamal_InternshalaResume (1).pdf"
+              class="btn btn-primary home-button"
+              >My Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="z-index: 0"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="https://th.bing.com/th/id/R.e6342d6c73e6d41391742c5b24dd2186?rik=d%2fdv7bBX780BTQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1467232004584-a241de8bcf5d%3fcrop%3dentropy%26cs%3dtinysrgb%26fit%3dmax%26fm%3djpg%26ixid%3dMnwxMjA3fDB8MXxzZWFyY2h8MXx8cGVyc29uYWwlMjBjb21wdXRlcnx8MHx8fHwxNjMwMTQ3Mjk2%26ixlib%3drb-1.2.1%26q%3d80%26w%3d1080&ehk=%2bN2Nf7BKzx9VAMQt9lI%2f8ka4UqeiqvGCUablqtj94JQ%3d&risl=&pid=ImgRaw&r=0"
+            alt="..."
+            height="400px"
+            width="1400px"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://images.unsplash.com/photo-1588617312589-2235be964ac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBncmFwaGljc3x8MHx8fHwxNjI4ODExNDk0&ixlib=rb-1.2.1&q=80&w=1080"
+            class="d-block w-100"
+            alt="..."
+            height="400px"
+            width="1400px"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1580982336957-29e605c705d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMjA3fDB8MXxzZWFyY2h8NHx8c2NpZW5jZSUyMGFuZCUyMHRlY2hub2xvZ3l8fDB8fHw&ixlib=rb-1.2.1&q=80&w=1080"
+            class="d-block w-100"
+            alt="..."
+            height="400px"
+            width="1400px"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+        style="width: auto; height: 40px; top: 50%; color: black"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+        style="width: auto; height: 40px; top: 50%; color: black"
+      >
+        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              A little bit about myself and my background
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="about-description">
+              With a keen interest in Web Development, Designing and Coding, I
+              am passionate to craft some intuitive and excellent user
+              experiences. I have developed a range of technical skills during
+              my graduation journey and also have collaborated with my
+              batchmates on various technical projects and presentations with
+              successful outcomes. I would like to work for a company where I
+              would be able to capture practical knowledges to polish these
+              skills.
+            </p>
+            <p>
+              <a href="pd.html">Personal Details</a><br /><br />
+              <a href="eq.html">Educational Qualification</a><br /><br />
+              <a href="ho.html">Hobbies</a>
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+              perspiciatis eos recusandae, porro ea, ratione inventore et quam
+              adipisci aliquam ullam, soluta optio incidunt quo illum eveniet
+              aspernatur facilis sapiente similique. Vitae inventore qui,
+              mollitia molestias, placeat molestiae dicta maiores, eveniet
+              tempore nostrum rem voluptatibus maxime delectus voluptatum error
+              sit deleniti autem. Aliquam sunt at a expedita voluptatum
+              delectus, ducimus eveniet hic fuga, consequatur quos modi incidunt
+              est quia soluta. Amet, iure. Nulla totam alias doloremque veniam
+              quod temporibus minus nisi rem sint ad ex excepturi eos atque
+              deserunt consequuntur dolorum eligendi cum, tempora et nihil quia.
+              Dolor, minus ab!
+            </p>
+          </div>
+          <div class="col-md-6">
+            <section id="skills" class="skills-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">
+                      The technologies and tools that I use
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="skill-item">
+                      <h5 class="skill-name">HTML</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-success"
+                          role="progressbar"
+                          style="width: 90%"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          90%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">CSS</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="80"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          80%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">JavaScript</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 70%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">Bootstrap</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          80%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">SQL</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 70%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">C++</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          80%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container" id="projects" style="z-index: 0">
+      <h2>Projects</h2>
+      <div class="row">
+        <div class="col-md-6" style="padding: 12px">
+          <div class="card">
+            <div class="card-body">
+              <h4>Project 1</h4>
+              <h6 class="section-subtitle">
+                Project on the Single-page Website about 'Living Life'
+              </h6>
+              <p>Oct 2023 - Oct 2023</p>
+              <p>
+                Developed a beautiful and refreshing Website- 'Living Life To
+                The Fullest' that tells about my perception on Positivity and
+                Living Life. Added sections such as Navbar, Home, About,
+                Gallery, Contact, etc. using HTML, CSS and JS.
+              </p>
+              <a href="#" class="btn btn-primary">Visit Site ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 12px">
+          <div class="card">
+            <div class="card-body">
+              <h4>Project 2</h4>
+              <h6 class="section-subtitle">
+                Project on the Personal Portfolio Website
+              </h6>
+              <p>Dec 2023 - Present</p>
+              <p>
+                Built a Personal Portfolio that describes my Web Development
+                journey and includes my personalized notes on HTML, CSS,
+                JavaScript, SQL and C++. Mentioned sections such as Home, About,
+                Web Development, etc. using HTML, CSS, JS and Bootstrap.
+              </p>
+              <a href="#" class="btn btn-primary">Visit Site ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 12px">
+          <div class="card">
+            <div class="card-body">
+              <h4>Project 3</h4>
+              <h6 class="section-subtitle">
+                Project on the Clone of an E-Commerce Website
+              </h6>
+              <p>Nov 2023 - Present</p>
+              <p>
+                Developed a functional E-Commerce Website inspired by Flipkart,
+                in collaboration with my batchmate. Implemented features such as
+                user registration, product listing, shopping cart, etc. by
+                utilizing HTML, CSS, JS and Bootstrap.
+              </p>
+              <a href="#" class="btn btn-primary">Visit Site ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 12px">
+          <div class="card">
+            <div class="card-body">
+              <h4>Project 4</h4>
+              <h6 class="section-subtitle">
+                Project on the single page website about 'AI vs ML vs DL'
+              </h6>
+              <p>Dec 2023 - Present</p>
+              <p>
+                Developed an informative Website- 'AI vs ML vs DL' that
+                describes the most exponentially spreading technologies
+                now-a-days. Added sections such as Navbar, Home, Description,
+                Contact, etc. using HTML, CSS, JS and Bootstrap.
+              </p>
+              <a href="#" class="btn btn-primary">Visit Site ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery Section -->
+    <div class="bucket" id="gallery" style="padding-top: 60px">
+      <h2 style="width: 100%; text-align: center; padding-bottom: 35px">
+        My Gallery
+      </h2>
+      <div class="container3">
+        <h1 style="font-size: 25px">Good Vibes</h1>
+        <div class="item">
+          <img
+            src="https://i.pinimg.com/originals/27/2e/1e/272e1e01f346ac497e7250d85517dc62.png"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://th.bing.com/th/id/R.218b1465dd0a85182f9c37b88a561894?rik=AZLiRLMTtJThHg&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1555445091-5a8b655e8a4a%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=zxWN3TuAfJo7X7FF8hVEnreSCP7EoM9K%2bWKCT1DI3J0%3d&risl=&pid=ImgRaw&r=0"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://i.pinimg.com/736x/83/b4/21/83b42176179df59e13dab84a7fc7cffd.jpg"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://i.pinimg.com/originals/6f/b1/96/6fb196517420d98e71a757f1222e4785.jpg"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="container3">
+        <h1 style="font-size: 25px">Positivity</h1>
+        <div class="item">
+          <img
+            src="https://images.unsplash.com/photo-1464716821973-e1031cfa43dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8ZmluZHx8MHx8fHwxNjE4OTY3ODMz&ixlib=rb-1.2.1&q=80&w=1080"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://www.enwallpaper.com/wp-content/uploads/photo-1594819167477-290dd33b4daa.jpg"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://images.unsplash.com/photo-1527555197883-98e27ca0c1ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+            alt="..."
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://images.unsplash.com/photo-1627178416548-314c1f13cbef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="container3">
+        <img
+          style="height: 490px; width: 360px; padding: 12px 0px 12px"
+          src="https://i.pinimg.com/originals/27/2e/1e/272e1e01f346ac497e7250d85517dc62.png"
+          alt="..."
+        />
+      </div>
+    </div>
+
+    <div class="bucket2">
+      <div class="image-slider1">
+        <div class="arrow left-arrow">&lt;</div>
+        <div class="images-container">
+          <div>
+            <img
+              src="https://quotefancy.com/media/wallpaper/3840x2160/2280949-Oprah-Winfrey-Quote-Living-your-best-life-is-your-most-important.jpg"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.powerofpositivity.com/wp-content/uploads/2021/01/Robert-Brault-768x432.png"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/13_1.jpg"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/56/5e/ad/565eadf37d9058df2e271a3ab8a903e2.png"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i0.wp.com/www.creativehealthyfamily.com/wp-content/uploads/2022/10/we-all-have-limits-quote.png?resize=768%2C768&ssl=1"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/86/2d/57/862d57c00ceb18750a63ab7af0bc4d08.jpg"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/56/5e/ad/565eadf37d9058df2e271a3ab8a903e2.png"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i0.wp.com/www.creativehealthyfamily.com/wp-content/uploads/2022/10/we-all-have-limits-quote.png?resize=768%2C768&ssl=1"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/86/2d/57/862d57c00ceb18750a63ab7af0bc4d08.jpg"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="arrow right-arrow">&gt;</div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2023 SS. All rights reserved.</p>
+      <p>
+        Follow me on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and
+        <a href="#">Instagram</a>.
+      </p>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Get the button and the dropdown elements
+    let btn = document.getElementById("btn");
+    let dropdown = document.getElementById("dropdown");
+
+    // Add a click event listener to the button
+    btn.addEventListener("click", function () {
+      // Toggle the show class to the dropdown element
+      dropdown.classList.toggle("show");
+    });
+  </script>
+
+  <script>
+    const imagesContainer = document.querySelector(".images-container");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    const imageWidth = document.querySelector(
+      ".images-container img"
+    ).clientWidth;
+    let currentPosition = 0;
+    leftArrow.addEventListener("click", () => {
+      currentPosition += imageWidth;
+      if (currentPosition > 0) {
+        currentPosition = -imageWidth * (imagesContainer.children.length - 1);
+      }
+      imagesContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
+    rightArrow.addEventListener("click", () => {
+      currentPosition -= imageWidth;
+      if (
+        currentPosition <
+        -imageWidth * (imagesContainer.children.length - 1)
+      ) {
+        currentPosition = 0;
+      }
+      imagesContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
+  </script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Form tag (To format and display the form contents on an HTML page):
+
+    HTML forms are essential for collecting user inputs from the users, on a website. 
+    Whether it's a search bar, a login screen or a multi-field registration form, HTML forms play a key role in web interactions. -->
+
+    <form action="/submit" method="post">
+      <!-- (The action attribute specifies the URL where the form data should be sent after submission.) -->
+
+      <label for="username">Username:</label>
+      <!-- The label tag is used to associate a label with a form control. 
+        The label tag can be used in two ways:
+        By providing the input tag with the id attribute (The label tag needs a for attribute whose value is the same as the id attribute of the related element)
+        By using the input tag directly inside the label tag (The for and id attributes are not needed) -->
+      <input type="text" id="username" name="username" required />
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+
+    <!-- Form Controls:
+
+    These are the objects used to format and display the form contents on an HTML page and make the form easier to use, i.e. make it easier for users to enter data.
+    Some of the form controls are: -->
+    <!-- The input element in HTML forms:
+    
+    This is very commonly used form control to format and display the form contents on an HTML page.
+    The attributes of the input tag define the control's behavior. -->
+
+    <input type="" name="" value="" placeholder="" />
+    <!-- (The "type" attribute specifies the type of the form control (e.g., text, password, checkbox, etc.), 
+    The "name" attribute is used for identifying the form control especially when the data is sent to the server,
+    The "value" attribute sets a default value for the form control, which the user can overwrite,
+    The "placeholder" attribute provides a hint to the users about, what to enter)
+    
+    Common HTML input types are: text, password, radio, and checkbox. -->
+    <!-- Text input (Most basic form of input and widely used for collecting simple text data): -->
+
+    <input type="text" name="username" placeholder="Enter your username" />
+    <br /><br />
+
+    <!-- Password input (Used for collecting simple text data but hides the characters entered by the user for security reasons): -->
+
+    <input type="password" name="password" placeholder="Enter your password" />
+    <br /><br />
+
+    <!-- Radio button (Used when we want the user to select only one option from a set of choices): -->
+
+    <input type="radio" id="male" name="gender" value="male" />
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="female">Female</label> <br /><br />
+
+    <!-- Checkbox (Allows the user to select multiple options from a set): -->
+
+    <input type="checkbox" id="subscribe" name="subscribe" value="yes" />
+    <label for="subscribe">Subscribe to newsletter</label> <br /><br />
+
+    <!-- Submit button (To submit the form after the user inputs are entered): -->
+
+    <input type="submit" value="Submit" /> <br /><br />
+
+    <!-- The textarea element in HTML forms:
+
+    This is used when we need multiline text input from the user. 
+    This is particularly useful for comments, reviews or any other type of input where the length is unpredictable. -->
+
+    <textarea name="comment" rows="4" cols="50">
+ <!-- (The rows and cols attributes define the rowwise and columnwise visible dimensions of the textarea.) -->
+        Enter your comment here...
+    </textarea>
+    <br /><br />
+
+    <!-- The select element in HTML forms:
+
+    This creates a dropdown menu for the users. 
+    It is useful when we have a predefined list of options for the users to choose from.
+    Each option inside the select tag represents an item in the dropdown list. -->
+
+    <select name="fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="cherry">Cherry</option>
+    </select>
+    <br /><br />
+
+    <!-- Combining textarea and select elements in HTML forms:
+
+    We can combine textarea and select elements in the same form to capture varied types of user input. -->
+
+    <form action="/submit">
+      <textarea name="comment" rows="4" cols="50">
+Enter your comment here...</textarea
+      >
+      <br /><br />
+      <select name="fruits">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br /><br />
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Frameset tag (To divide the webpage into multiple sections and add multiple webpages created earlier, to these frameset sections which helps to display multiple webpages on a single window):
+
+HTML frameset is a collection of frames and is used to divide the webpage into multiple sections and add multiple webpages created earlier, to these frameset sections which helps to display multiple webpages on a single window. -->
+
+    <frameset cols="*,*">
+        <frameset rows="*,*">
+            <frameset cols="*,*"> <!-- (Here the rows and cols attributes specify the number of rows and columns in the frameset and how much space they will occupy in a frame) -->
+                <frame src="wt1.html"> <!-- (HTML frame tag is used to add a webpage created earlier, to a frameset section) -->
+                <frame src="wt1.html"> <!-- (Here the src attribute is used to add the url of the webpage created earlier, to a frameset section) -->
+            </frameset>
+            <frame src="wt1.html">
+        </frameset> 
+        <frame src="wt1.html">
+    </frameset>
+
+<!-- Another example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <frameset rows="30%, 70%">
+    <frame src="">
+    <frameset cols="25%, 75%">
+      <frame src="left.html">
+      <frame src="right.html" name="rightFrame">  // (Here the data in name attribute is used in case when we want a webpage to add as a target for the link result to open)
+    </frameset>
+</frameset>
+</html> 
+
+left.html-> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://www.wikipedia.org/" target="rightFrame">Click here</a>
+  </body>
+</html>
+
+right.html->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html> -->
+</html>

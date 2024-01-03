@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Table tag (To format and display the tabular contents on an HTML page):
+    
+    HTML table is simply a collection or group of items or data in a row-wise and column-wise manner. -->
+
+    <table border="2px solid">
+      <thead>
+        <!-- (To group the header contents of an HTML table) -->
+        <caption>
+          <h2><u>Student marksheet table</u></h2>
+        </caption>
+        <!-- (To define the caption and can be used under or above the thead tag as in both cases it will appear outside above the table) -->
+        <tr>
+          <!-- (To define table rows) -->
+          <th>Name</th>
+          <!-- (To group the header contents of the columns of an HTML table) -->
+          <th>Roll no</th>
+          <!-- <th colspan="2">Roll no</th>
+                colspan and rowspan attributes are used to create cells, spanning multiple columns and rows respectively. -->
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- (To group the body contents of an HTML table) -->
+        <tr>
+          <td>Sonalika</td>
+          <!-- (To add table data) -->
+          <td>22</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Rajashree</td>
+          <td>16</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Ankita</td>
+          <td>4</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Saloni</td>
+          <td>26</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+      <!-- In case of html it won't make any difference if thead or tbody tag is not used but in case of css when we will try to add any style to any specific set of rows it can be done in one line under thead or tbody tag. -->
+      <tfoot>
+        <!-- (To group the footer contents of an HTML table) -->
+        <tr>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
