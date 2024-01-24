@@ -24,9 +24,9 @@
     ></script>
     <style>
       .btn {
-        background-color: #343a40;
+        background-color: #232629;
         color: white;
-        padding: 16px;
+        padding: 14px;
         font-size: 16px;
         border: none;
         cursor: pointer;
@@ -68,7 +68,8 @@
 
       body {
         font-size: smaller;
-        background-color: white;
+        background-color: rgb(180, 25, 90);
+        color: white;
       }
 
       .home-section {
@@ -84,7 +85,8 @@
       }
 
       .bucket {
-        background-color: gainsboro;
+        background-color: purple;
+        color: white;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -120,7 +122,8 @@
       }
 
       .bucket2 {
-        background-color: gainsboro;
+        background-color: purple;
+        color: white;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -171,7 +174,7 @@
       }
 
       .footer {
-        background-color: #343a40;
+        background-color: #232629;
         color: white;
         padding: 20px;
         text-align: center;
@@ -252,12 +255,12 @@
                   padding: 8px 8px 8px 0px;
                 "
               >
-                My Notes>
+                Blogs>
               </button>
               <div class="dropdown" id="dropdown">
-                <a href="HTML.html"> HTML </a>
-                <a href="#jn"> CSS </a>
-                <a href="#gv"> JavaScript </a>
+                <a href="#"> HTML </a>
+                <a href="#"> CSS </a>
+                <a href="#"> JavaScript </a>
               </div>
             </li>
             <li class="nav-item">
@@ -284,15 +287,19 @@
     <section id="home" class="home-section" style="padding-top: 70px">
       <div class="container" style="display: flex; flex-wrap: wrap">
         <div class="row align-items-center">
-          <div class="col-md-6">
+          <div class="col-md-6" style="padding-left: 50px">
             <img
               src="img.jpg"
               alt="profile"
               class="img-fluid rounded-circle"
-              style="height: 220px; width: 220px"
+              style="
+                height: 220px;
+                width: 220px;
+                border: 5px solid rgb(59, 148, 129);
+              "
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" style="padding-top: 28px">
             <h1 class="home-title">
               Hello, I'm <span class="home-name">Sonalika Samal</span>
             </h1>
@@ -393,35 +400,29 @@
               would be able to capture practical knowledges to polish these
               skills.
             </p>
-            <p>
+            <p style="color: #232629">
               <a href="pd.html">Personal Details</a><br /><br />
               <a href="eq.html">Educational Qualification</a><br /><br />
               <a href="ho.html">Hobbies</a>
             </p>
+            <p></p>
+            <h2 class="section-title">Skills</h2>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
-              perspiciatis eos recusandae, porro ea, ratione inventore et quam
-              adipisci aliquam ullam, soluta optio incidunt quo illum eveniet
-              aspernatur facilis sapiente similique. Vitae inventore qui,
-              mollitia molestias, placeat molestiae dicta maiores, eveniet
-              tempore nostrum rem voluptatibus maxime delectus voluptatum error
-              sit deleniti autem. Aliquam sunt at a expedita voluptatum
-              delectus, ducimus eveniet hic fuga, consequatur quos modi incidunt
-              est quia soluta. Amet, iure. Nulla totam alias doloremque veniam
-              quod temporibus minus nisi rem sint ad ex excepturi eos atque
-              deserunt consequuntur dolorum eligendi cum, tempora et nihil quia.
-              Dolor, minus ab!
+              Front-end : HTML, CSS, BootStrap, JavaScript, React, WordPress
             </p>
+            <p>Back-end : PHP, Node.js</p>
+            <p>Database : MySQL, MongoDB</p>
+            <p>Programming language : C++, Python</p>
+            <p>Graphic Designing : Figma, Canva, MSPowerPoint</p>
           </div>
           <div class="col-md-6">
             <section id="skills" class="skills-section">
               <div class="container">
                 <div class="row">
                   <div class="col-md-12">
-                    <h2 class="section-title">My Skills</h2>
-                    <p class="section-subtitle">
+                    <h4 class="section-subtitle">
                       The technologies and tools that I use
-                    </p>
+                    </h4>
                   </div>
                 </div>
                 <div class="row">
@@ -516,6 +517,21 @@
                         </div>
                       </div>
                     </div>
+                    <div class="skill-item">
+                      <h5 class="skill-name">Python</h5>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          role="progressbar"
+                          style="width: 70%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          80%
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -526,22 +542,21 @@
     </section>
     <div class="container" id="projects" style="z-index: 0">
       <h2>Projects</h2>
-      <div class="row">
+      <div class="row" style="color: #232629">
         <div class="col-md-6" style="padding: 12px">
           <div class="card">
             <div class="card-body">
-              <h4>Project 1</h4>
-              <h6 class="section-subtitle">
-                Project on the Single-page Website about 'Living Life'
-              </h6>
-              <p>Oct 2023 - Oct 2023</p>
+              <h4>Project 4</h4>
+              <h6 class="section-subtitle">Gaming Website</h6>
+              <p>Dec 2023 - Present</p>
               <p>
-                Developed a beautiful and refreshing Website- 'Living Life To
-                The Fullest' that tells about my perception on Positivity and
-                Living Life. Added sections such as Navbar, Home, About,
-                Gallery, Contact, etc. using HTML, CSS and JS.
+                Developed a Gaming Website- 'Our Childhood Treasure- All In One'
+                that contains the most popular games of our childhood, that will
+                refresh some of our joyful childhood memories. Added sections
+                such as Navbar, Game-Section, Contact, etc. using HTML, CSS and
+                JS.
               </p>
-              <a href="#" class="btn btn-primary">Visit Site ></a>
+              <a href="https://sonalika-samal.github.io/Gaming/" class="btn btn-primary">Visit Site ></a>
             </div>
           </div>
         </div>
@@ -549,17 +564,15 @@
           <div class="card">
             <div class="card-body">
               <h4>Project 2</h4>
-              <h6 class="section-subtitle">
-                Project on the Personal Portfolio Website
-              </h6>
+              <h6 class="section-subtitle">Personal Portfolio</h6>
               <p>Dec 2023 - Present</p>
               <p>
                 Built a Personal Portfolio that describes my Web Development
-                journey and includes my personalized notes on HTML, CSS,
-                JavaScript, SQL and C++. Mentioned sections such as Home, About,
-                Web Development, etc. using HTML, CSS, JS and Bootstrap.
+                journey and includes my personalized blogs on HTML, CSS,
+                JavaScript, etc. Mentioned sections such as Navbar, Skills,
+                Projects, Contact, etc. using HTML, CSS, JS and Bootstrap.
               </p>
-              <a href="#" class="btn btn-primary">Visit Site ></a>
+              <a href="https://sonalika-samal.github.io/Re1/" class="btn btn-primary">Visit Site ></a>
             </div>
           </div>
         </div>
@@ -567,9 +580,7 @@
           <div class="card">
             <div class="card-body">
               <h4>Project 3</h4>
-              <h6 class="section-subtitle">
-                Project on the Clone of an E-Commerce Website
-              </h6>
+              <h6 class="section-subtitle">E-Commerce Website Clone</h6>
               <p>Nov 2023 - Present</p>
               <p>
                 Developed a functional E-Commerce Website inspired by Flipkart,
@@ -584,18 +595,16 @@
         <div class="col-md-6" style="padding: 12px">
           <div class="card">
             <div class="card-body">
-              <h4>Project 4</h4>
-              <h6 class="section-subtitle">
-                Project on the single page website about 'AI vs ML vs DL'
-              </h6>
-              <p>Dec 2023 - Present</p>
+              <h4>Project 1</h4>
+              <h6 class="section-subtitle">Single-page Website</h6>
+              <p>Oct 2023 - Oct 2023</p>
               <p>
-                Developed an informative Website- 'AI vs ML vs DL' that
-                describes the most exponentially spreading technologies
-                now-a-days. Added sections such as Navbar, Home, Description,
-                Contact, etc. using HTML, CSS, JS and Bootstrap.
+                Developed a beautiful and refreshing Website- 'Living Life To
+                The Fullest' that tells about my perception on Positivity and
+                Living Life. Added sections such as Navbar, Home, About,
+                Gallery, Contact, etc. using HTML, CSS and JS.
               </p>
-              <a href="#" class="btn btn-primary">Visit Site ></a>
+              <a href="https://sonalika-samal.github.io/R/" class="btn btn-primary">Visit Site ></a>
             </div>
           </div>
         </div>
